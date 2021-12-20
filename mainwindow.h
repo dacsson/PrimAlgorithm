@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <theorywindow.h>
+#include <demonstrationwindow.h>
+#include <testingwindow.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,6 +20,8 @@ public:
 
 private slots:
     void on_TheoryButton_clicked();
+
+    void on_TestButton_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -13,6 +13,16 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QTextBrowser" name="QuestionTextBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>40</y>
+     <width>481</width>
+     <height>161</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

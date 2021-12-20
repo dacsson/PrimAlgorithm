@@ -12,3 +12,4 @@ DemonstrationWindow::~DemonstrationWindow()
 {
     delete ui;
 }
+

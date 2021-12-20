@@ -19,3 +19,10 @@ void MainWindow::on_TheoryButton_clicked()
     theoryWindow -> show();
 }
 
+
+void MainWindow::on_TestButton_clicked()
+{
+    TestingWindow *testintgWindow = new TestingWindow;
+    testintgWindow -> show();
+}
+
