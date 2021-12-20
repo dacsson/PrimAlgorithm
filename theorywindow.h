@@ -7,6 +7,9 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QDebug>
+#include <QJsonDocument>
+#include <QJsonParseError>
+#include <QJsonObject>
 
 namespace Ui {
 class TheoryWindow;
