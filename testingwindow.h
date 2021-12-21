@@ -26,9 +26,14 @@ public:
     explicit TestingWindow(QWidget *parent = nullptr);
     ~TestingWindow();
 
+private slots:
+    void on_nextQuestion_clicked();
+
 private:
     Ui::TestingWindow *ui;
-    void DisplayQuestions();    // - Вывести вопросы из SQLite базы на экран
+    QSqlQuery query;                                // - Очередь из БД
+    void DisplayFirstQuestion();                    // - Вывести первый вопрос из SQLite базы на экран при запуске
+    void DisplayNextQuestion();                     // - Вывести следующий вопрос
 };
 
 #endif // TESTINGWINDOW_H
