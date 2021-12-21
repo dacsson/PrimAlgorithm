@@ -1,6 +1,7 @@
 #ifndef THEORYWINDOW_H
 #define THEORYWINDOW_H
 
+#include "filemanager.h"
 #include <QDialog>
 #include <QTextBrowser>
 #include <QFile>

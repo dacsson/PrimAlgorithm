@@ -11,6 +11,7 @@ CONFIG += c++11
 
 SOURCES += \
     demonstrationwindow.cpp \
+    filemanager.cpp \
     main.cpp \
     mainwindow.cpp \
     testingwindow.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
 
 HEADERS += \
     demonstrationwindow.h \
+    filemanager.h \
     mainwindow.h \
     testingwindow.h \
     theorywindow.h

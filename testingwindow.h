@@ -1,6 +1,7 @@
 #ifndef TESTINGWINDOW_H
 #define TESTINGWINDOW_H
 
+#include "filemanager.h"
 #include <QDialog>
 #include <QSqlDatabase>
 #include <QSqlQuery>

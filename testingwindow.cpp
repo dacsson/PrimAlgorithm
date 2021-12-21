@@ -17,19 +17,9 @@ TestingWindow::~TestingWindow()
 
 void TestingWindow::DisplayQuestions()
 {
-    // - Получить путь к БД с материалом из файла с конфигурацией (файл с конфигом находится в домашней папке юзера), путь к файлу возникает в файле с конфигурацией в момент инсталляции
-    QString configName = "ApplicationConfig.json";                              // - Название конфиг файла, вместо Application ввести имя своего приложения
-    QFile configFile(QDir::homePath() + "/" + configName);                      // - Путь к файлу конфигурации
-
-    // - Если файла с конфигом не существует (например пользователь удалил), то вызвать окно с ошибкой
-    if( !configFile.open( QIODevice::ReadOnly ) )
-        QMessageBox::information(0, "info", configFile.errorString());
-
-    QByteArray configFile_bytes = configFile.readAll();                         // - Читаем содрежимое файла конфигурации
-    auto configFile_doc = QJsonDocument::fromJson(configFile_bytes);
-    QJsonObject configFile_obj = configFile_doc.object();
-    QVariantMap configFile_map = configFile_obj.toVariantMap();
-    QString DatabaseFile_PATH = configFile_map["DatabaseFile_PATH"].toString();     // - Берём путь к файлу по пути из файла конфигурации по ключу
+    // - Получаем путь к БД из менеджера файлов (FileManager.h)
+    FileManager FManager;
+    QString DatabaseFile_PATH = FManager.DatabaseFile_PATH;
 
     // - Загружаме БД по полученному пути
     QSqlDatabase QuestionsDB = QSqlDatabase::addDatabase("QSQLITE");
@@ -43,8 +33,6 @@ void TestingWindow::DisplayQuestions()
     query -> prepare("select * from questions");
     query -> exec();
 
-//    QSqlQueryModel *model = new QSqlQueryModel;
-//    model -> setQuery(*query);
     query->first();
     ui -> QuestionTextBox -> setText(query->value("TEXT").toString());
 }

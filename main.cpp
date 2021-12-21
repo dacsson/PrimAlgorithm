@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "filemanager.h"
 
 #include <QApplication>
 
