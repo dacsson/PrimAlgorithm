@@ -29,11 +29,22 @@ public:
 private slots:
     void on_nextQuestion_clicked();
 
+    void on_option1Button_clicked();
+    void on_option2Button_clicked();
+    void on_option3Button_clicked();
+    void on_option4Button_clicked();
+    void on_option5Button_clicked();
+
 private:
     Ui::TestingWindow *ui;
+    std::vector<int> userAnswers;                   // - Вектор ответов пользователя на вопросы
+    int questionNumber = 0;                         // - Номер вопроса на экране
     QSqlQuery query;                                // - Очередь из БД
     void DisplayFirstQuestion();                    // - Вывести первый вопрос из SQLite базы на экран при запуске
     void DisplayNextQuestion();                     // - Вывести следующий вопрос
+    void registerAnswer(int index);                 // - Принять ответ пользователя на вопрос
+    int CalculateUserScore();                       // - Посчитать результат пользователя (кол-во баллов)
+    void ClearUI();                                 // - Удалить точки с радиокнопок при переходе на следующий вопрос
 };
 
 #endif // TESTINGWINDOW_H
