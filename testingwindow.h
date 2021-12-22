@@ -44,6 +44,7 @@ private:
     void DisplayNextQuestion();                     // - Вывести следующий вопрос
     void registerAnswer(int index);                 // - Принять ответ пользователя на вопрос
     int CalculateUserScore();                       // - Посчитать результат пользователя (кол-во баллов)
+    int CalculateUserMark(int score);               // - Посчитать какая оценка у пользователя за тест (оценить)
     void ClearUI();                                 // - Удалить точки с радиокнопок при переходе на следующий вопрос
 };
 

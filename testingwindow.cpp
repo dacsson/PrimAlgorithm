@@ -68,7 +68,9 @@ void TestingWindow::DisplayNextQuestion()
     else
     {
         // - Если записи кончились, то выводим окно с результатами
-        QMessageBox::information(0, "Конец тестирования", "Ваш результат: " + QString::number(CalculateUserScore()));
+        int score = CalculateUserScore();
+        int mark = CalculateUserMark(score);
+        QMessageBox::information(0, "Конец тестирования", "Ваш результат: " + QString::number(score) + "\nВаша оценка: " + QString::number(mark));
     }
 }
 
@@ -106,6 +108,11 @@ int TestingWindow::CalculateUserScore()
             score++;
     }
     return score;
+}
+
+int TestingWindow::CalculateUserMark(int score)
+{
+    // - Оценить пользователя
 }
 
 void TestingWindow::ClearUI()
