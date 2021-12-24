@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>599</width>
+    <width>584</width>
     <height>493</height>
    </rect>
   </property>
@@ -16,10 +16,10 @@
   <widget class="QTextBrowser" name="TheoryDisplayBox">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>30</y>
-     <width>511</width>
-     <height>431</height>
+     <x>0</x>
+     <y>0</y>
+     <width>581</width>
+     <height>491</height>
     </rect>
    </property>
   </widget>
