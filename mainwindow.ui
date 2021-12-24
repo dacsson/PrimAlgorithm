@@ -69,7 +69,7 @@
    </property>
    <widget class="QMenu" name="menuApp">
     <property name="title">
-     <string>App</string>
+     <string>Алгоритм Прима</string>
     </property>
    </widget>
    <addaction name="menuApp"/>
