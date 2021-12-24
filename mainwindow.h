@@ -5,6 +5,7 @@
 #include "theorywindow.h"
 #include "demonstrationwindow.h"
 #include "testingwindow.h"
+#include "demonstrationwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,6 +23,8 @@ private slots:
     void on_TheoryButton_clicked();
 
     void on_TestButton_clicked();
+
+    void on_DemonstrationButton_clicked();
 
 private:
     Ui::MainWindow *ui;

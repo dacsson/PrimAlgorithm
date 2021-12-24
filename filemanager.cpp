@@ -8,7 +8,7 @@ FileManager::FileManager()
 void FileManager::GetPathsFromConfig()
 {
     // - Получить путь к БД с материалом из файла с конфигурацией (файл с конфигом находится в домашней папке юзера), путь к файлу возникает в файле с конфигурацией в момент инсталляции
-    QString configName = "ApplicationConfig.json";                              // - Название конфиг файла, вместо Application ввести имя своего приложения
+    QString configName = "PrimAlgorithmConfig.json";                              // - Название конфиг файла, вместо Application ввести имя своего приложения
     QFile configFile(QDir::homePath() + "/" + configName);                      // - Путь к файлу конфигурации
 
     // - Если файла с конфигом не существует (например пользователь удалил), то вызвать окно с ошибкой

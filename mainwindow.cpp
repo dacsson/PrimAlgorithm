@@ -26,3 +26,10 @@ void MainWindow::on_TestButton_clicked()
     testintgWindow -> show();
 }
 
+
+void MainWindow::on_DemonstrationButton_clicked()
+{
+    DemonstrationWindow *demonstrationWindow = new DemonstrationWindow;
+    demonstrationWindow -> show();
+}
+
