@@ -114,9 +114,9 @@ int TestingWindow::CalculateUserMark(int score)
 {
     // - Оценить пользователя
     int mark;
-    if(score < 10) { mark = 2; }
-    else if(score < 15) { mark = 3; }
-    else if(score < 20) { mark = 4; }
+    if(score < 2) { mark = 2; }
+    else if(score < 5) { mark = 3; }
+    else if(score < 8) { mark = 4; }
     else { mark = 5; }
 
     return mark;
